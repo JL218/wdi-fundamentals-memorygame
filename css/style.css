@@ -32,6 +32,12 @@ nav {
 a {
   color: rgb(255,255,255);
   margin: 0 20px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  border-color: white;
 }
 
 /* h1 styling. */
@@ -58,4 +64,40 @@ h2, h3, h4, h5, h6 {
 
 img {
   margin: 40px 8px;
+}
+
+footer {
+  text-transform: uppercase;
+  padding: 0 20px;
+  background-color: #0D2C40;
+  color: white;
+  font-size: 14px;
+  letter-spacing: .08em;
+  font-weight: 500;
+}
+
+.name {
+  color: #F15B31;
+  font-weight: 700;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+
+.copyright, .message {
+  font-family: Raleway, sans-serif;
+}
+
+.copyright {
+  float: left;
+}
+
+.message {
+  float: right;
 }
