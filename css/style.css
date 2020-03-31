@@ -1,0 +1,61 @@
+/* body styling. */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: darkgoldenrod;
+  margin: 0;
+}
+
+main {
+  width: 850px;
+  margin: 35px auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+header {
+  background-color: rgb(241,91,49);
+  color: #ffffff;
+  padding: 30px 20px;
+  margin: 0;
+}
+
+nav {
+  background-color: #00A6B3;
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+a {
+  color: rgb(255,255,255);
+  margin: 0 20px;
+}
+
+/* h1 styling. */
+h1 {
+  font-family: Raleway, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  margin: 0;
+}
+
+/* h2 - h6 styling. */
+h2, h3, h4, h5, h6 {
+  color: navy;
+  font-size: 20px;
+}
+
+.game_titles {
+  color: purple;
+}
+
+#super_memory {
+  font-weight: 700;
+}
+
+img {
+  margin: 40px 8px;
+}
