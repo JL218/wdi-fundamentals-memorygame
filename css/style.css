@@ -67,8 +67,9 @@ img {
 }
 
 footer {
+  height: 20px;
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 20px;
   background-color: #0D2C40;
   color: white;
   font-size: 14px;
@@ -92,6 +93,7 @@ footer {
 
 .copyright, .message {
   font-family: Raleway, sans-serif;
+  display: block;
 }
 
 .copyright {
