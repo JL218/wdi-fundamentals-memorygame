@@ -15,14 +15,8 @@ function checkForMatch() {
 
 // flipping the cards over
 function flipCard(cardId) {
-  // const cardOne = cards[0];
-  // const cardTwo = cards[2];
-
-  // cardsInPlay.push(cardOne);
-  // cardsInPlay.push(cardTwo);
-
-  // console.log('User flipped: ' + cardOne);
-  // console.log('User flipped: ' + cardTwo);
+  // push and log cardId of flipped card.
+  // push to cards array / log to console. 
   console.log('User flipped: ' + cards[cardId]);
   cardsInPlay.push(cards[cardId]);
 
