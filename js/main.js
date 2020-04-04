@@ -1,6 +1,27 @@
 // // Create an array which contains the 4 cards;
 // Global Variables
-const cards = ['queen', 'queen', 'king', 'king'];
+const cards = [
+  {
+    rank: 'Queen',
+    suit: 'Hearts',
+    cardImage: 'images/queen-of-hearts.png'
+  },
+  {
+    rank: 'Queen',
+    suit: 'Diamonds',
+    cardImage: 'images/queen-of-diamonds.png'
+  },
+  {
+    rank: 'King',
+    suit: 'Hearts',
+    cardImage: 'images/king-of-hearts.png'
+  },
+  {
+    rank: 'King',
+    suit: 'Diamonds',
+    cardImage: 'images/king-of-diamonds.png'
+  }
+];
 const cardsInPlay = [];
 
 // // Function Declarations
@@ -17,8 +38,10 @@ function checkForMatch() {
 function flipCard(cardId) {
   // push and log cardId of flipped card.
   // push to cards array / log to console. 
-  console.log('User flipped: ' + cards[cardId]);
-  cardsInPlay.push(cards[cardId]);
+  console.log('User flipped: ' + cards[cardId].rank); // updated from cards[cardID];
+  cardsInPlay.push(cards[cardId].rank);
+  console.log(cards[cardId].suit);
+  console.log(cards[cardId].cardImage);
 
   if (cardsInPlay.length === 2) {
     // check for a matching pair, as declared in the function above this one;
