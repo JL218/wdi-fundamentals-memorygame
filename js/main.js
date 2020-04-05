@@ -25,6 +25,35 @@ const cards = [
 const cardsInPlay = [];
 
 // // Function Declarations
+
+function createBoard() {
+  for (let i = 0; i < cards.length; i++) {
+    let cardElement = document.createElement('img');
+    cardElement.setAttribute('src', 'images/back.png');
+    cardElement.setAttribute('data-id', i);
+    cardElement.addEventListener('click', flipCard);
+    document.getElementById('game-board').appendChild(cardElement);
+  }
+}
+
+// flipping the cards over
+function flipCard() {
+  // push and log cardId of flipped card.
+  // push to cards array / log to console.
+  cardId = this.getAttribute('data-id');
+  console.log('User flipped: ' + cards[cardId].rank); // updated from cards[cardID];
+  cardsInPlay.push(cards[cardId].rank);
+  console.log(cards[cardId].suit);
+  console.log(cards[cardId].cardImage);
+
+  this.setAttribute('src', cards[cardId].cardImage);
+
+  if (cardsInPlay.length === 2) {
+    // check for a matching pair, as declared in the function above this one;
+    checkForMatch();
+  }
+}
+
 // checking for matching pairs
 function checkForMatch() {
   if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -34,20 +63,4 @@ function checkForMatch() {
   }
 }
 
-// flipping the cards over
-function flipCard(cardId) {
-  // push and log cardId of flipped card.
-  // push to cards array / log to console. 
-  console.log('User flipped: ' + cards[cardId].rank); // updated from cards[cardID];
-  cardsInPlay.push(cards[cardId].rank);
-  console.log(cards[cardId].suit);
-  console.log(cards[cardId].cardImage);
-
-  if (cardsInPlay.length === 2) {
-    // check for a matching pair, as declared in the function above this one;
-    checkForMatch();
-  }
-}
-
-flipCard(0);
-flipCard(2);
+createBoard();
